@@ -1,0 +1,8 @@
+/var/
+__pycache__/
+*.pyc
+.venv/
+*.sqlite*
+/docs/
+/AGENTS.md
+/.vscode/
