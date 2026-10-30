@@ -52,10 +52,64 @@ def make_server(service, host='127.0.0.1', port=0, token=None):
                     result = {'player': service.create_player(body)}
                 elif len(parts) == 4 and parts[:3] == ['api', 'v1', 'players'] and self.command == 'GET':
                     result = {'player': service.get_player(parts[3])}
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'raid-energy' and self.command == 'GET':
+                    result = service.get_raid_energy(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'roguelite' and self.command == 'GET':
+                    result = service.get_roguelite(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'free-crates' and self.command == 'GET':
+                    result = service.get_free_crates(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'squads' and self.command == 'GET':
+                    result = service.get_squads(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'preferences' and self.command == 'GET':
+                    result = service.get_preferences(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'client-settings' and self.command == 'GET':
+                    result = service.get_client_settings(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'challenge-limits' and self.command == 'GET':
+                    result = service.get_challenge_limits(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'augmentations' and self.command == 'GET':
+                    result = service.get_augmentations(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'objectives' and self.command == 'GET':
+                    result = service.get_objectives(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'passes' and self.command == 'GET':
+                    result = service.get_passes(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'access' and self.command == 'GET':
+                    result = service.get_access(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'progression' and self.command == 'GET':
+                    result = service.get_progression(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'resources' and self.command == 'GET':
+                    result = service.get_resources(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'calendars' and self.command == 'GET':
+                    result = service.get_calendars(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'milestones' and self.command == 'GET':
+                    result = service.get_milestones(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'alliances' and self.command == 'GET':
+                    result = service.get_alliances(parts[3])
+                elif len(parts) in (5, 6) and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'raids' and self.command == 'GET':
+                    result = service.get_raids(parts[3], parts[5] if len(parts) == 6 else None)
+                elif len(parts) == 6 and parts[:3] == ['api', 'v1', 'players'] and parts[4:] == ['alliances', 'search'] and self.command == 'POST':
+                    result = service.search_alliances(parts[3], body)
+                elif len(parts) == 6 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'alliances' and self.command == 'GET':
+                    result = service.get_alliances(parts[3], parts[5])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'receipt-lookup' and self.command == 'POST':
+                    result = service.lookup_receipt(parts[3], body)
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'mail' and self.command == 'GET':
+                    result = service.get_mail(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'raid-schedule' and self.command == 'GET':
+                    result = service.get_raid_schedule(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'ranked-arena' and self.command == 'GET':
+                    result = service.get_ranked_arena(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'seasonal-boost' and self.command == 'GET':
+                    result = service.get_seasonal_boost(parts[3])
+                elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'blitz' and self.command == 'GET':
+                    result = service.get_blitz(parts[3])
+                elif len(parts) in (5, 6) and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'dark-dimension' and self.command == 'GET':
+                    result = service.get_dark_dimension(parts[3], parts[5] if len(parts) == 6 else None)
                 elif len(parts) == 5 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'commands' and self.command == 'POST':
                     result = service.execute(parts[3], body)
                 elif len(parts) == 6 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'battles' and self.command == 'GET':
                     result = {'battle': service.get_battle(parts[3], parts[5])}
+                elif len(parts) == 6 and parts[:3] == ['api', 'v1', 'players'] and parts[4] == 'towers' and self.command == 'GET':
+                    result = service.get_tower(parts[3], parts[5])
                 else:
                     fail('not_found', 'Route is not part of API v1', 404)
                 self.send_json(200, result)

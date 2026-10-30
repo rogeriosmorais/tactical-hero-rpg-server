@@ -1,0 +1,773 @@
+{
+  "schema_version": 1,
+  "experience_per_level": 10,
+  "maximum_player_level": 3,
+  "starting_wallet": {},
+  "starting_characters": {
+    "scout": 1,
+    "striker": 1,
+    "healer": 1
+  },
+  "characters": {
+    "scout": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "guardian": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "healer": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "blaster": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "striker": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "warden": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "ranger": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "sentinel": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "adept": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    },
+    "vanguard": {
+      "maximum_level": 3,
+      "training_cost": {
+        "credits": 2
+      },
+      "power_per_level": 12
+    }
+  },
+  "missions": {},
+  "offers": {},
+  "experience_thresholds": [
+    0,
+    10,
+    20
+  ],
+  "development": {
+    "characters": {
+      "scout": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.scout": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.scout": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "guardian": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.guardian": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.guardian": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "healer": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.healer": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.healer": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "blaster": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.blaster": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.blaster": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "striker": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.striker": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.striker": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "warden": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.warden": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.warden": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "ranger": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.ranger": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.ranger": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "sentinel": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.sentinel": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.sentinel": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "adept": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.adept": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.adept": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      },
+      "vanguard": {
+        "experience_thresholds": [
+          0,
+          5,
+          15
+        ],
+        "recruitment": {
+          "wallet": {
+            "credits": 5
+          },
+          "inventory": {
+            "shards.vanguard": 5
+          }
+        },
+        "initial_rank": 1,
+        "rank_upgrades": [
+          {
+            "wallet": {
+              "credits": 2
+            },
+            "inventory": {
+              "shards.vanguard": 3
+            }
+          }
+        ],
+        "initial_abilities": [
+          1
+        ],
+        "abilities": [
+          [
+            {
+              "required_level": 1,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 0
+                },
+                "inventory": {}
+              }
+            },
+            {
+              "required_level": 2,
+              "required_tier": 1,
+              "payment": {
+                "wallet": {
+                  "credits": 2
+                },
+                "inventory": {
+                  "ability-token": 1
+                }
+              }
+            }
+          ]
+        ],
+        "tiers": [
+          {}
+        ]
+      }
+    },
+    "training_items": {
+      "training": {
+        "experience": 5,
+        "cost": {
+          "credits": 2
+        }
+      }
+    },
+    "recipes": {}
+  },
+  "roguelite": {
+    "minimum_team_size": 1,
+    "maximum_team_size": 5,
+    "enemy_teams": {
+      "patrol": [
+        "scout",
+        "guardian",
+        "healer",
+        "blaster",
+        "striker"
+      ],
+      "guard": [
+        "guardian",
+        "healer",
+        "blaster",
+        "striker",
+        "warden"
+      ]
+    },
+    "enemy_base_level": 1,
+    "enemy_level_step": 1,
+    "victory_rewards": {
+      "wallet": {
+        "credits": 10
+      },
+      "inventory": {
+        "training": 1,
+        "ability-token": 1
+      },
+      "experience": 10
+    },
+    "reward_bands": [
+      {
+        "minimum_enemy_level": 1,
+        "victory_rewards": {
+          "wallet": {"credits": 10},
+          "inventory": {"training": 1, "ability-token": 1},
+          "experience": 10
+        },
+        "shard_multiplier": 1
+      },
+      {
+        "minimum_enemy_level": 2,
+        "victory_rewards": {
+          "wallet": {"credits": 20},
+          "inventory": {"training": 2, "ability-token": 2},
+          "experience": 10
+        },
+        "shard_multiplier": 2
+      },
+      {
+        "minimum_enemy_level": 3,
+        "victory_rewards": {
+          "wallet": {"credits": 40},
+          "inventory": {"training": 4, "ability-token": 4},
+          "experience": 10
+        },
+        "shard_multiplier": 3
+      }
+    ],
+    "defeat_rewards": {},
+    "choice_count": 3,
+    "shard_pool": [
+      {
+        "character_id": "ranger",
+        "item_id": "shards.ranger",
+        "quantity": 5
+      },
+      {
+        "character_id": "sentinel",
+        "item_id": "shards.sentinel",
+        "quantity": 5
+      },
+      {
+        "character_id": "adept",
+        "item_id": "shards.adept",
+        "quantity": 5
+      },
+      {
+        "character_id": "vanguard",
+        "item_id": "shards.vanguard",
+        "quantity": 5
+      }
+    ],
+    "opening_enemy_team": [
+      "scout",
+      "striker",
+      "healer"
+    ]
+  }
+}

@@ -6,3 +6,10 @@ __pycache__/
 /docs/
 /AGENTS.md
 /.vscode/
+
+# Local design / original-client QA notes intentionally excluded from public publishing.
+/concepts_brief.md
+/mode_concepts_brief.md
+/design_draft.md
+/mvp_acceptance.md
+/review_resolution.md

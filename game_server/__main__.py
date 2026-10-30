@@ -4,6 +4,7 @@ from pathlib import Path
 
 from .http_api import make_server
 from .service import GameService
+from .profile_lock import own_profile
 
 
 def main():
@@ -15,13 +16,14 @@ def main():
     parser.add_argument('--service-token', help='Independently chosen internal service credential')
     args = parser.parse_args()
     catalog = json.loads(args.catalog.read_text(encoding='utf-8')) if args.catalog else None
-    service = GameService(args.database, catalog)
-    with make_server(service, args.host, args.port, args.service_token) as server:
-        print(json.dumps({'ready': True, 'host': args.host, 'port': server.server_port, 'api_version': 1}), flush=True)
-        try:
-            server.serve_forever()
-        except KeyboardInterrupt:
-            pass
+    with own_profile(args.database):
+        service = GameService(args.database, catalog)
+        with make_server(service, args.host, args.port, args.service_token) as server:
+            print(json.dumps({'ready': True, 'host': args.host, 'port': server.server_port, 'api_version': 1}), flush=True)
+            try:
+                server.serve_forever()
+            except KeyboardInterrupt:
+                pass
 
 
 if __name__ == '__main__':

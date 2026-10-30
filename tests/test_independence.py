@@ -16,9 +16,11 @@ class IndependenceTests(unittest.TestCase):
             for folder in ('game_server', 'tools'):
                 shutil.copytree(ROOT / folder, isolated / folder, ignore=shutil.ignore_patterns('__pycache__'))
             (isolated / 'tests').mkdir()
-            shutil.copy2(ROOT / 'tests/test_core.py', isolated / 'tests/test_core.py')
+            for test in (ROOT / 'tests').glob('test_*.py'):
+                if test.name != Path(__file__).name:
+                    shutil.copy2(test, isolated / 'tests' / test.name)
             process = subprocess.run([sys.executable, '-I', '-S', '-B', str(isolated / 'tools/isolated_probe.py'), '--core-tests'],
-                                     cwd=isolated, capture_output=True, text=True, timeout=20)
+                                     cwd=isolated, capture_output=True, text=True, timeout=60)
             self.assertEqual(process.returncode, 0, process.stdout + process.stderr)
             result = json.loads(process.stdout)
             self.assertEqual(result['status'], 'passed')

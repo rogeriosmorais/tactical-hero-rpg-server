@@ -61,10 +61,27 @@ python -S -m game_server --database var/game.sqlite --port 18080
 No `pip install` step is needed.
 
 API v1 supports players, catalogs, wallets,
-inventory, character training, mission execution, sweeping and purchases.
+inventory, character training, mission execution, sweeping, purchases and
+configurable Towers with no account-level unlock gate. An optional authored
+`free_crates` catalog section now provides server-owned refill, rotation,
+claims and idempotent rewards; it does not load client asset/rule files.
+Tower progression,
+cooldowns, scoring and rewards are authoritative application transactions.
+See [API v1 and catalog schema](API.md).
 The server calculates prices and rewards, persists state, and enforces atomic
 idempotent commands. The default catalog is a small authored example, not
 any proprietary game's content or balance.
+
+An optional authored [Roguelite MVP catalog](examples/roguelite-mvp.json) exercises
+replayable runs with 1–5-character squads, seeded five-enemy encounters, permanent
+shard choices and repeatable progression earned from victories. Defeat grants
+no XP, currency, materials or shard choice; earlier winnings remain permanent. Its rules
+and persistence live entirely in this service; it requires no private runtime.
+Its authored enemy-level reward bands grant larger currency/material bundles and
+shard quantities as opposition levels rise. Rewards are frozen with the issued
+encounter and battle. The example still has a three-level cap; it does not define
+the complete mode's progression range or economy.
+Use a new database when selecting a different catalog.
 
 An optional `--catalog PATH` reads only this API's documented catalog schema.
 `--service-token TOKEN` sets a separately chosen application credential;
